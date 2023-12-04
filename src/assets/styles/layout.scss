@@ -1,8 +1,14 @@
 .layout{
     display: flex;
     flex-direction: row;
+    height: 100vh;
+    .navsidebar{
+        flex: 1;
+        max-width: 320px;
+    }
     .outlet{
-        margin-left: 320px;
+        flex: 1;
+        // margin-left: 320px;
         height: 100vh;
     }
 }

@@ -8,9 +8,9 @@ function Layout() {
       <div className='navsidebar'>
         <SideNavbar />
       </div>
-        <div className='outlet'>
-          <Outlet />
-        </div>
+      <div className='outlet'>
+        <Outlet />
+      </div>
     </div>
   )
 }

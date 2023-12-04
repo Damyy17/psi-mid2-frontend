@@ -160,7 +160,11 @@ function CreateAppointment() {
                     </div>
 
                     <div className="book-appointment">
-                        
+                        <div className="book-button-data">
+                            <div className="date">{selectedDay} {months[selectedMonth]}</div>
+                            <div className="start-end-time">11:30 pm</div>
+                        </div>
+                        <button className="book-appointment">Book</button>
                     </div>
                 </div>
             </div>
