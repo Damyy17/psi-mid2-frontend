@@ -1,0 +1,176 @@
+$background-color: #F1F2FF;
+$primary-color: #5463FF;
+$secondary-color: #fefefe;
+$dark-color: #1E1E1E;
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+
+body{
+    font-family: "Cabin", sans-serif;
+    background-color: $background-color;
+    .container-create-apointment{
+        p{
+            text-align: left;
+            margin: 0;
+            color: $dark-color;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 24px 40px;
+        gap: 24px;
+        .title-section {
+            text-align: left;
+            color: $dark-color;
+            background-color: $secondary-color;
+            width: 1236px;
+            border-radius: 10px;
+            p{
+                margin: 0;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                padding: 18px 36px;
+            }
+        }
+        .chose-specialty-container{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 12px;
+            .title-container-specialty{
+                color: $dark-color;
+                font-size: 16px;
+            }
+            .list-of-specialties{
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                .specialty-item{
+                    color: $dark-color;
+                    padding: 12px 24px;
+                    background-color: $secondary-color;
+                    font-size: 14px;
+                    border-radius: 5px;
+                    &.active{
+                        background-color: $primary-color;
+                        color: $secondary-color;
+                    }
+                    &:hover{    
+                        background-color: $primary-color;
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+        .chose-doctor-container{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 12px;
+            .title-container-doctor{
+                color: $dark-color;
+                font-size: 16px;
+            }
+            .list-of-doctors{
+                display: flex;
+                flex-direction: row;
+                gap: 36px;
+                .doctor-card{
+                    padding: 35px 53px;
+                    background-color: $secondary-color;
+                    font-size: 14px;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+                    border: 2px solid $secondary-color;
+                    filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.25));
+                    .profile-photo{
+                        width: 94px;
+                        height: 94px;
+                        border-radius: 100px;
+                        background-color: $background-color;
+                    }
+                    .name-surname{
+                        color: $dark-color;
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                    .specialty{
+                        color: $dark-color;
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                    &.active{
+                        border: 2px solid $primary-color;
+                        filter: drop-shadow(3px 4px 20px rgba(84, 99, 255, 0.20));
+                    }
+                    &:hover{
+                        border: 2px solid $primary-color;
+                        filter: drop-shadow(3px 4px 20px rgba(84, 99, 255, 0.20));
+                    }
+                }
+            }
+        }
+        .chose-date-hour-appointment-container{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 12px;
+            .title-container-appointment{
+                color: $dark-color;
+                font-size: 16px;
+            }
+            .choose-month-day{
+                padding: 26px;
+                display: flex;
+                align-items: start;
+                background-color: $secondary-color;
+                width: 1236px;
+                border-radius: 10px;
+                align-items: center;
+                gap: 32px;
+                label{
+                    color: $dark-color;
+                    font-size: 14px;
+                }
+                select{
+                    background-color: $secondary-color;
+                    border: none;
+                    color: $dark-color;
+                    font-weight: 500;
+                }
+
+            }
+            .choose-hour{
+
+            }
+            .description{
+                width: 1236px;
+                border-radius: 10px;
+                background-color: $secondary-color;
+                min-height: 40px;
+                display: flex;
+                align-items: start;
+                padding: 26px;
+                textarea{
+                    border: none;
+                    background-color: $secondary-color;
+                    color: $dark-color;
+                    width: 1212px;
+                    resize: none;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+            .book-appointment{
+
+            }
+
+        }
+    }
+}

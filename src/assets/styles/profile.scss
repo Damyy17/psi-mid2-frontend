@@ -1,0 +1,96 @@
+$background-color: #F1F2FF;
+$primary-color: #5463FF;
+$secondary-color: #fefefe;
+$dark-color: #1E1E1E;
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+
+body{
+    font-family: "Cabin", sans-serif;
+    background-color: $background-color;
+    .container-profile{
+        p{
+            text-align: left;
+            margin: 0;
+            color: $dark-color;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 24px 40px;
+        gap: 24px;
+        .title-section {
+            text-align: left;
+            color: $dark-color;
+            background-color: $secondary-color;
+            width: 1236px;
+            border-radius: 10px;
+            p{
+                margin: 0;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                padding: 18px 36px;
+            }
+        }
+        .profile-details{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            .profile-details-section{
+                display: flex;
+                flex-direction: row;
+                text-align: left;
+                color: $dark-color;
+                background-color: $secondary-color;
+                width: 1236px;
+                border-radius: 10px;
+                .fields{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 28px 32px;
+                    gap: 24px;
+                }
+                .fields-values{
+                    color: #747775;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 28px 32px;
+                    gap: 24px
+                }
+            }
+        }
+        .apointment-history{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            .apointment-history-section{
+                text-align: left;
+                color: $dark-color;
+                background-color: $secondary-color;
+                width: 1236px;
+                border-radius: 10px;
+                table{
+                    border-spacing: 12px;
+                    padding: 24px 24px;
+                    tr{
+                        padding: 8px 0px;
+                        th{
+                            width: auto;
+                            text-align: center;
+                            padding-bottom: 16px;
+                        }
+                        td{
+                            padding-bottom: 12px;
+                            padding: 0 36px;
+                            width: auto;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
