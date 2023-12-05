@@ -1,21 +1,25 @@
 import { useState, useEffect } from "react";
 import '../assets/styles/apointments.scss'
+import api from "../api/axios";
 
 function Appointments() {
-    // const [appointments, setAppointments] = useState([]);
+    const [appointments, setAppointments] = useState([]);
+    const [id, setId] = useState(0);
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             const response = await axios.get('yourApiEndpoint');
-    //             setAppointments(response.data);
-    //         } catch (error) {
-    //             console.error('Error fetching data:', error);
-    //         }
-    //     };
+    useEffect(() => {
+        const fetchProfileData = async () => {
+            try {
+                const response = await api.get(`/Appointments/future/${id}`);
+                setAppointments(response.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
 
-    //     fetchData();
-    // }, []);
+        fetchProfileData();
+    }, [])
+
+    console.log(appointments);
 
     const staticAppointments = [
         {

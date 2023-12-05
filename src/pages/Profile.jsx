@@ -1,7 +1,27 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import "../assets/styles/profile.scss"
+import api from '../api/axios'
 
 function Profile() {
+
+    const [profileDetails, SetProfileDetails] = useState(null);
+
+    useEffect(() => {
+        const fetchProfile = async () => {
+            try {
+                const response = await api.get('/account/info');
+                SetProfileDetails(response.data)
+            } catch (error) {
+                console.log(error.response);
+                console.log(error.response.status);
+                console.log(error.response.headers);
+            }
+        }
+
+        fetchProfile();
+    }, [])
+
+    console.log(profileDetails);
 
     return (
         <>
